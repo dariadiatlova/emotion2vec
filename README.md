@@ -18,6 +18,18 @@
     <a href="https://github.com/ddlBoJack/MT4SSL"><img src="https://img.shields.io/badge/License-MIT-red.svg" alt="mit"></a>
 </div>
 
+## Setup 
+
+### Build Docker image
+```
+sudo docker build -t fairseq .
+```
+
+### Run Docker container
+```
+sudo docker run -it --rm --net=host --ipc=host --gpus "all" -v </path_to/IEMOCAP_full_release>:/app/data -v $PWD:/app fairseq
+```
+
 ## Guides
 
 emotion2vec is the first universal speech emotion representation model. Through self-supervised pre-training, emotion2vec has the ability to extract emotion representation across different tasks, languages, and scenarios.
